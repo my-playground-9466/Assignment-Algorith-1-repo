@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Algo_9 {
@@ -11,10 +12,26 @@ public class Algo_9 {
             System.out.println("Enter the word :");
             input = scanner.nextLine();
 
+            }while(!(input.length()>1));
 
-            }while(inp)
+            char[] chars=input.toCharArray();
+            char[] temp=new char[chars.length];
 
-        while(true);
+        
+            for(int i=0;i<chars.length;i++){
+                char letter=chars[i];
+            
+                temp[chars.length-1-i]=chars[i];
+            }
+
+            if(Arrays.equals(temp,chars)){
+                System.out.println("Word is palindrome");
+            }else{
+                 System.out.println("Word is not palindrome");
+            }
+            
+
+        }while(true);
     
         
     }
