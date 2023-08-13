@@ -27,7 +27,7 @@ public class Algo_5 {
             char[] chars=text.toCharArray();
             char[] temp=new char[chars.length];
 
-            loop:
+        
             for(int i=0;i<chars.length;i++){
                 char letter=chars[i];
             
