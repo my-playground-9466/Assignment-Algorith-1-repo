@@ -6,25 +6,32 @@ public class Algo_5 {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
+        String text1;
         String text;
         do{
             do{
                 System.out.print("Enter the text :");
-                text=scanner.nextLine();
+                text1=scanner.nextLine();
+                text = "";
 
-            }while(text.isBlank());
+                for(int i=0;i<text1.length();i++){
+                    char ch =text1.charAt(i);
+                    
+                    if(!Character.isWhitespace(ch)) text += ch;
+                }
+                
+
+
+            }while(text1.isBlank());
 
             char[] chars=text.toCharArray();
             char[] temp=new char[chars.length];
 
-           
+            loop:
             for(int i=0;i<chars.length;i++){
                 char letter=chars[i];
-
-                if(letter==' ') continue;
             
                 temp[chars.length-1-i]=chars[i];
-
             }
 
             chars=temp;
