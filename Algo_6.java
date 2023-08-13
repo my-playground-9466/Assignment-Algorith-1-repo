@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Algo_6 {
@@ -10,36 +11,21 @@ public class Algo_6 {
         do{
             do{
                 System.out.print("Enter the text :");
-                text=scanner.nextLine();
+                text=scanner.nextLine().strip();
 
             }while(text.isBlank());
 
-            char[] chars=text.toCharArray();
-            char[] temp=new char[chars.length];
+            String[] sentence=text.split(" ");
+            String[] temp=new String[sentence.length];
 
-            for(int i=0;i<chars.length;i++){
-                char letter=chars[i];
-                if(!(letter==' ')){
+        
+            for(int i=0;i<sentence.length;i++){
+                temp[sentence.length-1-i]=sentence[i];
+            }
 
-                    temp[i]=chars[i];
+            sentence=temp;
+            System.out.println(Arrays.toString(sentence));
 
-                }else{
-
-                    
-
-                     temp[i]=chars[i+1];
-                     letter=chars[i+2];
-                     
-                    }
-                
-                }
-                System.out.println(Arrays.toString(temp));
-
-           
-            
-            
-
-           // System.out.println(Arrays.toString(chars));
         }while(true);
         
 
