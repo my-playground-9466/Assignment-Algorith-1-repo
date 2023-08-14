@@ -16,9 +16,7 @@ public class Algo_8_1{
 
                 if( i==j ){
                     temp[i]=numA[j];
-
                 }
-            
             }
         }
 
@@ -26,16 +24,10 @@ public class Algo_8_1{
             for(int j=0;j<numB.length;j++){
 
                 if(i==j){
-                temp[numA.length+i]=numB[j];
+                    temp[numA.length+i]=numB[j];
                 }
             }
         }
-
-
-
-            
-
-
         
         System.out.println(Arrays.toString(temp));
 
